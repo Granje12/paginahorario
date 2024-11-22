@@ -1,0 +1,618 @@
+/* Reset de margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/*menu lateral*/
+.aside-container{
+    position: fixed;
+    top: 0;
+    background: linear-gradient(to bottom right, #FF6F61, #DE1F83);
+    padding: 20px;
+    width: 240px;
+    min-height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.35s;
+    z-index: 999;
+}
+
+/* div para afastar conteudo dentro do menu lateral */
+.container-nav{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8vh;
+}
+
+.aside-nav{
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aside-header a{
+    margin: 0;
+    padding: 0;
+}
+
+.logo-img{
+    max-width: 140px;
+    transition: transform 0.4s;
+    margin: 0;
+}
+
+.logo-img:hover{
+    transform: scale(1.05);
+}
+
+.aside-nav li {
+    margin: 15px 0;
+}
+
+.aside-nav a:hover {
+    color: white;
+}
+
+
+.aside-lista{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.aside-lista li {
+    list-style: none;
+}
+
+.aside-lista i{
+    font-size: 24px;
+    margin-right: 8px
+}
+
+.aside-lista ul{
+    margin: 15px 0;
+}
+
+.aside-lista  a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-text a.active{
+    color: white;  
+}
+
+.aside-nav a.active{
+    color: white;
+}
+
+.create-but{
+    flex-grow: 1;
+}
+
+.create-itinerary-btn {
+    background-color: #fff;
+    color: #ff6161;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    display: block;
+}
+
+.create-itinerary-btn:hover {
+    background-color: #ffdcdc;
+    color: #ff6161;
+}
+
+
+
+/*conteudo principal*/
+.main-content {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 250px;
+    margin-right: 6px;
+    overflow: hidden;
+    flex-direction: column;
+}
+/*slide infinito imagem atrás da logo - inicio*/
+.but-int{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.create-itinerary-mob{
+    display: none;
+}
+
+.img-destaque{
+    width: 95%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+.img-destaque_logo{
+    width: 25%;
+    display: block;
+    position: absolute;
+    bottom: auto;
+    z-index: 99;
+}
+
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    min-height: 200px;
+    max-height: 300px;
+}
+
+.slide {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 2s ease-in-out;
+    display: block;
+}
+
+.slide.zoom {
+    transform: scale(1.2);
+}
+
+.slide.reset {
+    transform: scale(1);
+}
+
+/*slide infito imagem atrás da logo - final*/
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* carrocel - inicio */
+.destinos{
+    margin-bottom: 16px;
+}
+
+.destinos-cidades{
+    background-color: rgba(0, 0, 0, 0.2);
+    width: auto;
+    padding: 0.5em 1.5em;
+    border-radius: 10px;
+    overflow: hidden; /* Oculta as imagens que não estão visíveis no carrossel */
+    margin: 0 auto;
+    position: relative;
+}
+
+.destinos-cidades ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.destinos-cidades ul li img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.destino-cidades__card{
+    display: flex;
+    flex-direction: column;
+}
+
+.title-cidade h3{
+    font-size: 0.7em;
+    text-align: center;
+}
+
+/* carrocel - final */
+
+#open_btn {
+    display: none; /* Esconde o botão lateral de expanção do menu em telas maiores */
+}
+/* codigo Footer - inicio */
+:root{
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+
+    }
+    
+.rodape{
+    margin-left: 240px;
+    padding: 0;
+    box-sizing: content-box;
+    letter-spacing: 1px;
+    letter-spacing: 1px;
+    width: 87,2%;
+    height: 100%;
+    color: var(--color-neutral-40) ;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footer-link{
+    text-decoration: none;
+}
+#footer_content {
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 3rem 3,5rem;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    
+    
+    
+}
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+#footer_contacts p {
+    margin-bottom: 0.75rem;
+}
+#footer_social_media{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1,5rem;
+}
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+
+}
+#footer_social_media .footer-link:i {
+    font-size: 1.25rem;
+}
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807)
+}
+#facebook {
+    background-color: #4267b3;
+}
+#whatsapp {
+    background-color: #25d366;
+}
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+.footer-list .footer-link{
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+.footer-list .footer-link:hover{
+    color: #DE1F83;
+}
+#footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+#footer_subscribe p {
+    color: var(--color-neutral-30);
+}
+#input_group{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+}
+#input_group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+#input_group button {
+    background-color: #DE1F83 ;
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+#input_group button:hover{
+    opacity: 0.8;
+}
+#footer_copyright{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+/* codigo Footer - fim */
+
+/* Ajustando sidebar com apenas icones. Tela para tabletes*/
+@media (width < 920px){
+    .aside-container{
+        width: 72px;
+    }
+
+    .aside-lista li > i {
+        width: 50px;
+    }
+
+    .aside-lista li > a > span{
+        opacity: 0;
+    }
+
+    .create-itinerary-btn{
+        display: none;
+    }
+
+    .aside-header a > img{
+        width: 110%; 
+    }
+
+    .main-content {
+        transition: margin 0.4s;
+        margin-left: 78px;
+    }
+
+    .create-itinerary-mob{
+        background-color:#ff4848;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+        border: none;
+        border-radius: 25px;
+        display: block;
+        width: 60%;
+        margin-top: -30px;
+        z-index: 9;
+    }
+
+
+/* botão para expandir menu lateral - inicio */
+    #open_btn {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: -10px;
+        background-color: #e3e9f7;
+        color: #ff4848;
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.5);
+          
+    }
+    
+    #open_btn_icon {
+        transition: transform .3s ease;
+        font-size: 10px;
+    }
+    
+    .open-sidebar #open_btn_icon {
+        transform: rotate(180deg);
+    }
+    
+    #sidebar.open-sidebar {
+        min-width: 250px;
+    }
+    
+    #sidebar.open-sidebar li a span {
+        opacity: 100%;
+    }
+/* botão para expandir menu lateral - final*/
+ /*Responsividade do footer - início*/
+ #footer_content{
+    grid-template-columns: repeat(2,1fr);
+    gap:2rem;
+ }
+.rodape{
+    margin-left: 72px;
+}
+
+}
+/* Fim tela para tabletes */
+
+    /* testes: Criar novo roteiro */
+.box {
+    width: 84.5vw;
+    height: 96vh;
+    background-color: #EBEBEB;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+}
+
+.text_title {
+    position: relative;
+    z-index: 2;
+    color: #EA2B59;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+.search-box {
+    position: absolute;
+    z-index: 2;
+    margin-top: 20px;
+    margin-left: 73px;
+    scale: 1.5;
+  }
+  #destinos{
+    margin-top: 100px;
+  }
+  .listrecom{
+    
+    color: #f5f5f5;
+    display: grid;
+    grid-template-columns: repeat(4,200px);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-rows: repeat(4,200px);
+    margin-top: 300px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+
+
+  }
+  .rj{background-image: url('/src/assets/imagens/rio.jpeg');
+    padding: 5px;
+border-radius: 10px;
+background-size: cover;}
+   .sp{background-image: url(/src/assets/imagens/sao\ paulo.jpeg);
+    padding: 5px;
+    border-radius: 10px;
+    background-size: cover;}
+   .recife{    background-image: url(/src/assets/imagens/recife.jpeg);
+    padding: 5px;
+    border-radius: 10px;
+    background-size: cover;}
+   .salvador{background-image: url(/src/assets/imagens/salvador.jpeg);
+    padding: 5px;
+    border-radius: 10px;
+    background-size: cover;}
+   .natal{background-image: url(/src/assets/imagens/natal.jpeg);
+    padding: 5px;
+    border-radius: 10px;
+    background-size: cover;}
+   .paris{background-image: url(/src/assets/imagens/paris.jpeg);
+    padding: 5px;
+    border-radius: 10px;
+    background-size: cover;}
+   .belem{background-image: url(/src/assets/imagens/parabelem.png);
+    padding: 5px;border-radius: 10px;
+    background-size: cover;}
+   .gramado{background-image: url(/src/assets/imagens/gramado.jpeg);
+padding: 5px;
+border-radius: 10px;
+background-size: cover;}
+
+
+
+@media (max-width: 480px){
+    .aside-container{
+        width: 50px;
+        padding: 13px;
+    }
+
+    .button-mobile{
+        display: flex;
+    }
+
+    .main-content{
+        margin-left: 60px;
+        margin-top: 5px;
+        padding: 5px;
+    }
+    #footer_content{
+        grid-template-columns: repeat(1,1fr);
+        gap:2rem;
+        padding: 2rem 3rem;
+     }
+     .rodape{
+        margin-left: 20px;
+     }
+}
+/* Fim tela para smartphones */
+
+.local-perto{
+    width: 50%;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* codigo carousel- inicio */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color:black;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+    user-select: none;
+}
+.prev-btn {
+    margin-left: 3px;
+    left: -9px; /* Ajusta a posição para que fique antes da lista */
+    border-radius: 3px 0 0 3px;
+}
+
+.next-btn {
+    right: -8px; /* Ajusta a posição para que fique depois da lista */
+    margin-right: 3px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev-btn:hover,.next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.card-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* As imagens serão cortadas se necessário, mas sem distorção */
+    border-radius: 50%; /* Apenas uma borda arredondada opcional */
+   
+  }
+ 
+/* codigo carousel - final */
+
+
